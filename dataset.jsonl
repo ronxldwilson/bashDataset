@@ -1,0 +1,398 @@
+{"prompt": "List all files including hidden ones in a directory", "completion": "ls -la"}
+{"prompt": "Create a new directory named 'backup'", "completion": "mkdir backup"}
+{"prompt": "Move all .txt files to the 'docs' folder", "completion": "mv *.txt docs/"}
+{"prompt": "Search for the word 'ERROR' in all .log files recursively", "completion": "grep -r 'ERROR' *.log"}
+{"prompt": "Write a Bash script to check if a file exists", "completion": "if [ -f filename ]; then echo 'File exists'; fi"}
+{"prompt": "Schedule a cron job to run a script every day at 2am", "completion": "0 2 * * * /path/to/script.sh"}
+{"prompt": "Download a file from a URL using bash", "completion": "curl -O https://example.com/file.txt"}
+{"prompt": "Extract a .tar.gz archive", "completion": "tar -xzvf archive.tar.gz"}
+{"prompt": "Get the number of lines in a file", "completion": "wc -l filename.txt"}
+{"prompt": "Loop through all files in a directory and print their names", "completion": "for file in *; do echo \"$file\"; done"}
+{"prompt": "Replace all 'foo' with 'bar' in a file using sed", "completion": "sed -i 's/foo/bar/g' filename.txt"}
+{"prompt": "Print the current working directory", "completion": "pwd"}
+{"prompt": "Write a Bash function that says hello to a user", "completion": "greet() { echo \"Hello, $1!\"; }"}
+{"prompt": "Display disk usage in human-readable format", "completion": "df -h"}
+{"prompt": "Find all .sh files and make them executable", "completion": "find . -name '*.sh' -exec chmod +x {} \\;"}
+{"prompt": "Write a bash script to backup the /var/log directory to /backup with a timestamped archive", "completion": "tar -czf /backup/logs_$(date +%F_%T).tar.gz /var/log"}
+{"prompt": "Create a bash script that checks if nginx is running, and restarts it if not", "completion": "if ! pgrep nginx > /dev/null; then systemctl restart nginx; fi"}
+{"prompt": "Write a bash script that finds the 5 largest files in the /home directory", "completion": "find /home -type f -exec du -h {} + | sort -rh | head -n 5"}
+{"prompt": "Write a bash script that monitors CPU usage and logs to /tmp/cpu.log every minute", "completion": "while true; do top -bn1 | grep 'Cpu(s)' >> /tmp/cpu.log; sleep 60; done"}
+{"prompt": "Write a bash script to extract lines containing 'error' from all .log files and save to errors.txt", "completion": "grep -i 'error' *.log > errors.txt"}
+{"prompt": "Write a bash script that renames all .txt files to .md", "completion": "for file in *.txt; do mv \"$file\" \"${file%.txt}.md\"; done"}
+{"prompt": "Create a bash script that checks disk space and emails admin if usage exceeds 90%", "completion": "df -H | awk '{ if($5+0 > 90) print $0 }' | mail -s 'Disk Alert' admin@example.com"}
+{"prompt": "Create a script that parses a CSV file and prints the second column", "completion": "awk -F, '{ print $2 }' file.csv"}
+{"prompt": "Write a bash script to count total number of active SSH connections", "completion": "who | grep 'ssh' | wc -l"}
+{"prompt": "Write a bash script that loops through all users and prints their home directory size", "completion": "for user in /home/*; do du -sh \"$user\"; done"}
+{"prompt": "Create a bash script that runs 'uptime' every 5 seconds and logs it with timestamp", "completion": "while true; do echo \"$(date): $(uptime)\" >> /tmp/uptime.log; sleep 5; done"}
+{"prompt": "Write a bash script to find and delete files older than 30 days in /tmp", "completion": "find /tmp -type f -mtime +30 -delete"}
+{"prompt": "Create a script to ping google.com every 10 seconds and log failures", "completion": "while true; do ping -c1 google.com > /dev/null || echo \"Failed at $(date)\" >> ping.log; sleep 10; done"}
+{"prompt": "Write a bash script that extracts email addresses from a file", "completion": "grep -E -o \"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\" file.txt"}
+{"prompt": "Create a bash script that compresses all files in current directory except *.jpg", "completion": "tar --exclude='*.jpg' -czf archive.tar.gz *"}
+{"prompt": "Show the last 20 lines of a file", "completion": "tail -n 20 filename.txt"}
+{"prompt": "Display the first 10 lines of a file", "completion": "head -n 10 filename.txt"}
+{"prompt": "Count the number of words in a file", "completion": "wc -w filename.txt"}
+{"prompt": "Display file permissions in octal format", "completion": "stat -c '%a' filename.txt"}
+{"prompt": "Find files modified in the last 24 hours", "completion": "find . -type f -mtime -1"}
+{"prompt": "Create a symbolic link to a file", "completion": "ln -s /path/to/original /path/to/link"}
+{"prompt": "Remove all empty directories recursively", "completion": "find . -type d -empty -delete"}
+{"prompt": "Display memory usage information", "completion": "free -h"}
+{"prompt": "Show running processes sorted by CPU usage", "completion": "ps aux --sort=-%cpu"}
+{"prompt": "Kill all processes with a specific name", "completion": "pkill processname"}
+{"prompt": "Create a compressed backup of home directory", "completion": "tar -czf home_backup.tar.gz ~"}
+{"prompt": "Display network interface information", "completion": "ifconfig -a"}
+{"prompt": "Show open network connections", "completion": "netstat -tuln"}
+{"prompt": "Mount a USB drive", "completion": "mount /dev/sdb1 /mnt/usb"}
+{"prompt": "Unmount a USB drive", "completion": "umount /mnt/usb"}
+{"prompt": "Display system uptime", "completion": "uptime"}
+{"prompt": "Show kernel version", "completion": "uname -r"}
+{"prompt": "Display all environment variables", "completion": "env"}
+{"prompt": "Set an environment variable", "completion": "export VARIABLE_NAME=value"}
+{"prompt": "Display the date and time", "completion": "date"}
+{"prompt": "Show calendar for current month", "completion": "cal"}
+{"prompt": "Display system information", "completion": "uname -a"}
+{"prompt": "Show CPU information", "completion": "cat /proc/cpuinfo"}
+{"prompt": "Display RAM information", "completion": "cat /proc/meminfo"}
+{"prompt": "Show disk partition information", "completion": "fdisk -l"}
+{"prompt": "Display currently logged in users", "completion": "who"}
+{"prompt": "Show last login information", "completion": "last"}
+{"prompt": "Display system load average", "completion": "cat /proc/loadavg"}
+{"prompt": "Show temperature sensors", "completion": "sensors"}
+{"prompt": "Display USB devices", "completion": "lsusb"}
+{"prompt": "Show PCI devices", "completion": "lspci"}
+{"prompt": "Display block devices", "completion": "lsblk"}
+{"prompt": "Show file system types", "completion": "df -T"}
+{"prompt": "Display inode usage", "completion": "df -i"}
+{"prompt": "Find duplicate files by MD5 hash", "completion": "find . -type f -exec md5sum {} + | sort | uniq -d -w 32"}
+{"prompt": "Change file ownership", "completion": "chown user:group filename"}
+{"prompt": "Change file permissions", "completion": "chmod 755 filename"}
+{"prompt": "Make a file executable", "completion": "chmod +x filename"}
+{"prompt": "Remove execute permission", "completion": "chmod -x filename"}
+{"prompt": "Set sticky bit on directory", "completion": "chmod +t directory"}
+{"prompt": "Create a hard link", "completion": "ln original_file hard_link"}
+{"prompt": "Display file type", "completion": "file filename"}
+{"prompt": "Show file size in bytes", "completion": "wc -c filename"}
+{"prompt": "Display hexadecimal dump of file", "completion": "hexdump -C filename"}
+{"prompt": "Show binary content of file", "completion": "xxd filename"}
+{"prompt": "Compare two files", "completion": "diff file1 file2"}
+{"prompt": "Show differences side by side", "completion": "diff -y file1 file2"}
+{"prompt": "Create patch file from differences", "completion": "diff -u file1 file2 > patch.diff"}
+{"prompt": "Apply a patch", "completion": "patch < patch.diff"}
+{"prompt": "Sort lines in a file", "completion": "sort filename"}
+{"prompt": "Sort lines numerically", "completion": "sort -n filename"}
+{"prompt": "Sort lines in reverse order", "completion": "sort -r filename"}
+{"prompt": "Remove duplicate lines", "completion": "sort filename | uniq"}
+{"prompt": "Count duplicate lines", "completion": "sort filename | uniq -c"}
+{"prompt": "Show only duplicate lines", "completion": "sort filename | uniq -d"}
+{"prompt": "Show only unique lines", "completion": "sort filename | uniq -u"}
+{"prompt": "Split file into smaller parts", "completion": "split -l 1000 filename part_"}
+{"prompt": "Join split files back together", "completion": "cat part_* > combined_file"}
+{"prompt": "Cut specific columns from file", "completion": "cut -d',' -f2,4 filename.csv"}
+{"prompt": "Display specific character range", "completion": "cut -c1-10 filename"}
+{"prompt": "Transpose rows and columns", "completion": "awk '{for(i=1;i<=NF;i++) a[NR,i]=$i; if(NF>maxNF) maxNF=NF} END {for(i=1;i<=maxNF;i++) {for(j=1;j<=NR;j++) printf \"%s \",a[j,i]; print \"\"}}' filename"}
+{"prompt": "Print specific line number", "completion": "sed -n '5p' filename"}
+{"prompt": "Delete specific line", "completion": "sed '3d' filename"}
+{"prompt": "Replace text in specific line", "completion": "sed '2s/old/new/' filename"}
+{"prompt": "Add text to beginning of each line", "completion": "sed 's/^/PREFIX: /' filename"}
+{"prompt": "Add text to end of each line", "completion": "sed 's/$/ :SUFFIX/' filename"}
+{"prompt": "Remove empty lines", "completion": "sed '/^$/d' filename"}
+{"prompt": "Remove lines containing specific text", "completion": "sed '/pattern/d' filename"}
+{"prompt": "Print lines between two patterns", "completion": "sed -n '/start/,/end/p' filename"}
+{"prompt": "Convert tabs to spaces", "completion": "expand filename"}
+{"prompt": "Convert spaces to tabs", "completion": "unexpand filename"}
+{"prompt": "Remove trailing whitespace", "completion": "sed 's/[[:space:]]*$//' filename"}
+{"prompt": "Convert text to uppercase", "completion": "tr '[:lower:]' '[:upper:]' < filename"}
+{"prompt": "Convert text to lowercase", "completion": "tr '[:upper:]' '[:lower:]' < filename"}
+{"prompt": "Remove specific characters", "completion": "tr -d 'chars' < filename"}
+{"prompt": "Replace characters", "completion": "tr 'abc' 'xyz' < filename"}
+{"prompt": "Squeeze repeated characters", "completion": "tr -s ' ' < filename"}
+{"prompt": "Generate random password", "completion": "openssl rand -base64 32"}
+{"prompt": "Calculate MD5 hash", "completion": "md5sum filename"}
+{"prompt": "Calculate SHA256 hash", "completion": "sha256sum filename"}
+{"prompt": "Encrypt file with password", "completion": "openssl enc -aes-256-cbc -salt -in filename -out filename.enc"}
+{"prompt": "Decrypt encrypted file", "completion": "openssl enc -aes-256-cbc -d -in filename.enc -out filename"}
+{"prompt": "Generate SSH key pair", "completion": "ssh-keygen -t rsa -b 4096 -C 'email@example.com'"}
+{"prompt": "Copy SSH key to remote server", "completion": "ssh-copy-id user@hostname"}
+{"prompt": "Connect to remote server via SSH", "completion": "ssh user@hostname"}
+{"prompt": "Run command on remote server", "completion": "ssh user@hostname 'command'"}
+{"prompt": "Transfer file via SCP", "completion": "scp filename user@hostname:/path/"}
+{"prompt": "Transfer directory via SCP", "completion": "scp -r directory user@hostname:/path/"}
+{"prompt": "Sync directories with rsync", "completion": "rsync -av source/ destination/"}
+{"prompt": "Sync with remote server", "completion": "rsync -av source/ user@hostname:/path/"}
+{"prompt": "Sync with progress", "completion": "rsync -av --progress source/ destination/"}
+{"prompt": "Sync excluding files", "completion": "rsync -av --exclude='*.tmp' source/ destination/"}
+{"prompt": "Download file with wget", "completion": "wget https://example.com/file.txt"}
+{"prompt": "Download with custom filename", "completion": "wget -O newname.txt https://example.com/file.txt"}
+{"prompt": "Download recursively", "completion": "wget -r https://example.com/"}
+{"prompt": "Download in background", "completion": "wget -b https://example.com/file.txt"}
+{"prompt": "Resume interrupted download", "completion": "wget -c https://example.com/file.txt"}
+{"prompt": "Test network connectivity", "completion": "ping -c 4 google.com"}
+{"prompt": "Trace network route", "completion": "traceroute google.com"}
+{"prompt": "Check port connectivity", "completion": "nc -zv hostname 80"}
+{"prompt": "Scan network ports", "completion": "nmap hostname"}
+{"prompt": "Show ARP table", "completion": "arp -a"}
+{"prompt": "Display routing table", "completion": "route -n"}
+{"prompt": "Show DNS resolution", "completion": "nslookup hostname"}
+{"prompt": "Query DNS records", "completion": "dig hostname"}
+{"prompt": "Display network statistics", "completion": "ss -tuln"}
+{"prompt": "Monitor network traffic", "completion": "iftop"}
+{"prompt": "Show bandwidth usage", "completion": "vnstat"}
+{"prompt": "Capture network packets", "completion": "tcpdump -i eth0"}
+{"prompt": "Start HTTP server", "completion": "python3 -m http.server 8000"}
+{"prompt": "Create user account", "completion": "useradd -m username"}
+{"prompt": "Delete user account", "completion": "userdel -r username"}
+{"prompt": "Change user password", "completion": "passwd username"}
+{"prompt": "Add user to group", "completion": "usermod -aG groupname username"}
+{"prompt": "Switch to another user", "completion": "su - username"}
+{"prompt": "Run command as another user", "completion": "sudo -u username command"}
+{"prompt": "List groups for user", "completion": "groups username"}
+{"prompt": "Display user information", "completion": "id username"}
+{"prompt": "Show password file", "completion": "cat /etc/passwd"}
+{"prompt": "Show group file", "completion": "cat /etc/group"}
+{"prompt": "Lock user account", "completion": "usermod -L username"}
+{"prompt": "Unlock user account", "completion": "usermod -U username"}
+{"prompt": "Set user shell", "completion": "usermod -s /bin/bash username"}
+{"prompt": "Check system log", "completion": "tail -f /var/log/syslog"}
+{"prompt": "View kernel messages", "completion": "dmesg"}
+{"prompt": "Show boot log", "completion": "journalctl -b"}
+{"prompt": "Follow system journal", "completion": "journalctl -f"}
+{"prompt": "Check service status", "completion": "systemctl status servicename"}
+{"prompt": "Start a service", "completion": "systemctl start servicename"}
+{"prompt": "Stop a service", "completion": "systemctl stop servicename"}
+{"prompt": "Restart a service", "completion": "systemctl restart servicename"}
+{"prompt": "Enable service at boot", "completion": "systemctl enable servicename"}
+{"prompt": "Disable service at boot", "completion": "systemctl disable servicename"}
+{"prompt": "List all services", "completion": "systemctl list-units --type=service"}
+{"prompt": "Show failed services", "completion": "systemctl --failed"}
+{"prompt": "Reload systemd configuration", "completion": "systemctl daemon-reload"}
+{"prompt": "Show system targets", "completion": "systemctl list-units --type=target"}
+{"prompt": "Change system target", "completion": "systemctl isolate multi-user.target"}
+{"prompt": "Show system hostname", "completion": "hostname"}
+{"prompt": "Set system hostname", "completion": "hostnamectl set-hostname newhostname"}
+{"prompt": "Show timezone", "completion": "timedatectl"}
+{"prompt": "Set timezone", "completion": "timedatectl set-timezone America/New_York"}
+{"prompt": "Show locale settings", "completion": "locale"}
+{"prompt": "Set locale", "completion": "localectl set-locale LANG=en_US.UTF-8"}
+{"prompt": "List available locales", "completion": "localectl list-locales"}
+{"prompt": "Show keyboard layout", "completion": "localectl status"}
+{"prompt": "Set keyboard layout", "completion": "localectl set-keymap us"}
+{"prompt": "Install package (Debian/Ubuntu)", "completion": "apt install packagename"}
+{"prompt": "Update package list", "completion": "apt update"}
+{"prompt": "Upgrade all packages", "completion": "apt upgrade"}
+{"prompt": "Remove package", "completion": "apt remove packagename"}
+{"prompt": "Search for package", "completion": "apt search packagename"}
+{"prompt": "Show package information", "completion": "apt show packagename"}
+{"prompt": "List installed packages", "completion": "dpkg -l"}
+{"prompt": "Install package (RedHat/CentOS)", "completion": "yum install packagename"}
+{"prompt": "Update packages (RedHat)", "completion": "yum update"}
+{"prompt": "Remove package (RedHat)", "completion": "yum remove packagename"}
+{"prompt": "Search package (RedHat)", "completion": "yum search packagename"}
+{"prompt": "Install package (Arch)", "completion": "pacman -S packagename"}
+{"prompt": "Update system (Arch)", "completion": "pacman -Syu"}
+{"prompt": "Remove package (Arch)", "completion": "pacman -R packagename"}
+{"prompt": "Search package (Arch)", "completion": "pacman -Ss packagename"}
+{"prompt": "Clean package cache", "completion": "apt autoclean"}
+{"prompt": "Remove orphaned packages", "completion": "apt autoremove"}
+{"prompt": "Download package without installing", "completion": "apt download packagename"}
+{"prompt": "Install local package file", "completion": "dpkg -i package.deb"}
+{"prompt": "Extract package contents", "completion": "dpkg -x package.deb /tmp/"}
+{"prompt": "List package contents", "completion": "dpkg -L packagename"}
+{"prompt": "Find which package owns file", "completion": "dpkg -S /path/to/file"}
+{"prompt": "Check package integrity", "completion": "debsums packagename"}
+{"prompt": "Hold package from updates", "completion": "apt-mark hold packagename"}
+{"prompt": "Unhold package", "completion": "apt-mark unhold packagename"}
+{"prompt": "Show package dependencies", "completion": "apt depends packagename"}
+{"prompt": "Show reverse dependencies", "completion": "apt rdepends packagename"}
+{"prompt": "Create directory structure", "completion": "mkdir -p /path/to/deep/directory"}
+{"prompt": "Copy with preserve attributes", "completion": "cp -p source destination"}
+{"prompt": "Copy recursively", "completion": "cp -r source_dir destination_dir"}
+{"prompt": "Move multiple files", "completion": "mv file1 file2 file3 destination/"}
+{"prompt": "Remove directory and contents", "completion": "rm -rf directory"}
+{"prompt": "Remove files matching pattern", "completion": "rm *.tmp"}
+{"prompt": "Find files by name", "completion": "find /path -name 'filename'"}
+{"prompt": "Find files by extension", "completion": "find /path -name '*.txt'"}
+{"prompt": "Find files by size", "completion": "find /path -size +100M"}
+{"prompt": "Find files by permission", "completion": "find /path -perm 755"}
+{"prompt": "Find files by owner", "completion": "find /path -user username"}
+{"prompt": "Find files by group", "completion": "find /path -group groupname"}
+{"prompt": "Find and execute command", "completion": "find /path -name '*.log' -exec rm {} \\;"}
+{"prompt": "Find files and print details", "completion": "find /path -type f -ls"}
+{"prompt": "Find empty files", "completion": "find /path -type f -empty"}
+{"prompt": "Find executable files", "completion": "find /path -type f -executable"}
+{"prompt": "Find SUID files", "completion": "find /path -type f -perm -4000"}
+{"prompt": "Find SGID files", "completion": "find /path -type f -perm -2000"}
+{"prompt": "Find world-writable files", "completion": "find /path -type f -perm -002"}
+{"prompt": "Find files newer than reference", "completion": "find /path -newer reference_file"}
+{"prompt": "Find files older than days", "completion": "find /path -type f -mtime +7"}
+{"prompt": "Find files accessed recently", "completion": "find /path -type f -atime -1"}
+{"prompt": "Find files by inode", "completion": "find /path -inum 12345"}
+{"prompt": "Find broken symlinks", "completion": "find /path -type l ! -exec test -e {} \\; -print"}
+{"prompt": "Locate file in database", "completion": "locate filename"}
+{"prompt": "Update locate database", "completion": "updatedb"}
+{"prompt": "Which command location", "completion": "which command"}
+{"prompt": "Show command type", "completion": "type command"}
+{"prompt": "Show all command locations", "completion": "whereis command"}
+{"prompt": "Search command in PATH", "completion": "command -v commandname"}
+{"prompt": "List directory contents with details", "completion": "ls -lah"}
+{"prompt": "List files by modification time", "completion": "ls -lt"}
+{"prompt": "List files by size", "completion": "ls -lS"}
+{"prompt": "List files recursively", "completion": "ls -R"}
+{"prompt": "List only directories", "completion": "ls -d */"}
+{"prompt": "List with color", "completion": "ls --color=auto"}
+{"prompt": "List with indicators", "completion": "ls -F"}
+{"prompt": "List with inode numbers", "completion": "ls -i"}
+{"prompt": "List one file per line", "completion": "ls -1"}
+{"prompt": "List with full time", "completion": "ls -l --full-time"}
+{"prompt": "Show file tree structure", "completion": "tree"}
+{"prompt": "Show directory sizes", "completion": "du -sh *"}
+{"prompt": "Show largest directories", "completion": "du -h | sort -rh | head -10"}
+{"prompt": "Show disk usage summary", "completion": "du -s *"}
+{"prompt": "Monitor disk usage", "completion": "watch -n 1 df -h"}
+{"prompt": "Check filesystem", "completion": "fsck /dev/sda1"}
+{"prompt": "Show mounted filesystems", "completion": "mount | column -t"}
+{"prompt": "Show filesystem UUID", "completion": "blkid"}
+{"prompt": "Create filesystem", "completion": "mkfs.ext4 /dev/sdb1"}
+{"prompt": "Resize filesystem", "completion": "resize2fs /dev/sda1"}
+{"prompt": "Check filesystem usage", "completion": "tune2fs -l /dev/sda1"}
+{"prompt": "Create swap file", "completion": "dd if=/dev/zero of=/swapfile bs=1M count=1024"}
+{"prompt": "Enable swap file", "completion": "swapon /swapfile"}
+{"prompt": "Disable swap", "completion": "swapoff -a"}
+{"prompt": "Show swap usage", "completion": "swapon -s"}
+{"prompt": "Show process tree", "completion": "pstree"}
+{"prompt": "Show processes by user", "completion": "ps -u username"}
+{"prompt": "Show process threads", "completion": "ps -eLf"}
+{"prompt": "Show process environment", "completion": "ps eww"}
+{"prompt": "Monitor processes", "completion": "top"}
+{"prompt": "Interactive process viewer", "completion": "htop"}
+{"prompt": "Kill process by PID", "completion": "kill 1234"}
+{"prompt": "Force kill process", "completion": "kill -9 1234"}
+{"prompt": "Kill process by name", "completion": "killall processname"}
+{"prompt": "Send signal to process", "completion": "kill -USR1 1234"}
+{"prompt": "List available signals", "completion": "kill -l"}
+{"prompt": "Show process status", "completion": "ps -p 1234 -o pid,ppid,cmd,stat"}
+{"prompt": "Show process limits", "completion": "cat /proc/1234/limits"}
+{"prompt": "Show process files", "completion": "lsof -p 1234"}
+{"prompt": "Show files opened by user", "completion": "lsof -u username"}
+{"prompt": "Show files opened on filesystem", "completion": "lsof /mnt/data"}
+{"prompt": "Show network connections by process", "completion": "lsof -i"}
+{"prompt": "Show specific port usage", "completion": "lsof -i :80"}
+{"prompt": "Run command in background", "completion": "command &"}
+{"prompt": "List background jobs", "completion": "jobs"}
+{"prompt": "Bring job to foreground", "completion": "fg %1"}
+{"prompt": "Send job to background", "completion": "bg %1"}
+{"prompt": "Disown background job", "completion": "disown %1"}
+{"prompt": "Run command with low priority", "completion": "nice -n 10 command"}
+{"prompt": "Change process priority", "completion": "renice -n 5 -p 1234"}
+{"prompt": "Run command immune to hangups", "completion": "nohup command &"}
+{"prompt": "Run command in screen session", "completion": "screen -S sessionname command"}
+{"prompt": "List screen sessions", "completion": "screen -ls"}
+{"prompt": "Attach to screen session", "completion": "screen -r sessionname"}
+{"prompt": "Run command in tmux session", "completion": "tmux new-session -d -s sessionname command"}
+{"prompt": "List tmux sessions", "completion": "tmux list-sessions"}
+{"prompt": "Attach to tmux session", "completion": "tmux attach-session -t sessionname"}
+{"prompt": "Archive with compression", "completion": "tar -czf archive.tar.gz directory/"}
+{"prompt": "Archive with bzip2", "completion": "tar -cjf archive.tar.bz2 directory/"}
+{"prompt": "Archive with xz", "completion": "tar -cJf archive.tar.xz directory/"}
+{"prompt": "List archive contents", "completion": "tar -tzf archive.tar.gz"}
+{"prompt": "Extract specific file", "completion": "tar -xzf archive.tar.gz path/to/file"}
+{"prompt": "Extract to specific directory", "completion": "tar -xzf archive.tar.gz -C /destination/"}
+{"prompt": "Create zip archive", "completion": "zip -r archive.zip directory/"}
+{"prompt": "Extract zip archive", "completion": "unzip archive.zip"}
+{"prompt": "List zip contents", "completion": "unzip -l archive.zip"}
+{"prompt": "Extract specific file from zip", "completion": "unzip archive.zip path/to/file"}
+{"prompt": "Create password-protected zip", "completion": "zip -r -P password archive.zip directory/"}
+{"prompt": "Extract with password", "completion": "unzip -P password archive.zip"}
+{"prompt": "Compress file with gzip", "completion": "gzip filename"}
+{"prompt": "Decompress gzip file", "completion": "gunzip filename.gz"}
+{"prompt": "Compress file with bzip2", "completion": "bzip2 filename"}
+{"prompt": "Decompress bzip2 file", "completion": "bunzip2 filename.bz2"}
+{"prompt": "Compress file with xz", "completion": "xz filename"}
+{"prompt": "Decompress xz file", "completion": "unxz filename.xz"}
+{"prompt": "View compressed file", "completion": "zcat filename.gz"}
+{"prompt": "Search in compressed file", "completion": "zgrep pattern filename.gz"}
+{"prompt": "Compare compressed files", "completion": "zdiff file1.gz file2.gz"}
+{"prompt": "Show file checksums", "completion": "sha1sum *"}
+{"prompt": "Verify checksums", "completion": "sha1sum -c checksums.txt"}
+{"prompt": "Create checksum file", "completion": "sha256sum * > checksums.txt"}
+{"prompt": "Show hardware information", "completion": "lshw"}
+{"prompt": "Show DMI information", "completion": "dmidecode"}
+{"prompt": "Show BIOS information", "completion": "dmidecode -t bios"}
+{"prompt": "Show memory information", "completion": "dmidecode -t memory"}
+{"prompt": "Show processor information", "completion": "dmidecode -t processor"}
+{"prompt": "Show system information", "completion": "dmidecode -t system"}
+{"prompt": "Show motherboard information", "completion": "dmidecode -t baseboard"}
+{"prompt": "Show chassis information", "completion": "dmidecode -t chassis"}
+{"prompt": "Show cache information", "completion": "dmidecode -t cache"}
+{"prompt": "Show connector information", "completion": "dmidecode -t connector"}
+{"prompt": "Show slot information", "completion": "dmidecode -t slot"}
+{"prompt": "Display hardware sensors", "completion": "sensors"}
+{"prompt": "Show battery information", "completion": "acpi -b"}
+{"prompt": "Show thermal information", "completion": "acpi -t"}
+{"prompt": "Show power adapter info", "completion": "acpi -a"}
+{"prompt": "Show fan information", "completion": "acpi -f"}
+{"prompt": "Monitor system resources", "completion": "vmstat 1"}
+{"prompt": "Show I/O statistics", "completion": "iostat -x 1"}
+{"prompt": "Monitor network statistics", "completion": "netstat -i"}
+{"prompt": "Show system calls", "completion": "strace command"}
+{"prompt": "Show library calls", "completion": "ltrace command"}
+{"prompt": "Profile CPU usage", "completion": "perf top"}
+{"prompt": "Record performance data", "completion": "perf record command"}
+{"prompt": "Show performance report", "completion": "perf report"}
+{"prompt": "Show memory map", "completion": "cat /proc/1234/maps"}
+{"prompt": "Show open file descriptors", "completion": "ls -la /proc/1234/fd/"}
+{"prompt": "Show process command line", "completion": "cat /proc/1234/cmdline"}
+{"prompt": "Show process status", "completion": "cat /proc/1234/status"}
+{"prompt": "Show process statistics", "completion": "cat /proc/1234/stat"}
+{"prompt": "Show system interrupts", "completion": "cat /proc/interrupts"}
+{"prompt": "Show system modules", "completion": "lsmod"}
+{"prompt": "Load kernel module", "completion": "modprobe modulename"}
+{"prompt": "Remove kernel module", "completion": "rmmod modulename"}
+{"prompt": "Show module information", "completion": "modinfo modulename"}
+{"prompt": "List loaded modules", "completion": "cat /proc/modules"}
+{"prompt": "Show module dependencies", "completion": "depmod -a"}
+{"prompt": "Create module dependencies", "completion": "depmod"}
+{"prompt": "Show kernel parameters", "completion": "sysctl -a"}
+{"prompt": "Set kernel parameter", "completion": "sysctl -w parameter=value"}
+{"prompt": "Load sysctl settings", "completion": "sysctl -p"}
+{"prompt": "Show kernel messages", "completion": "dmesg | tail"}
+{"prompt": "Clear kernel messages", "completion": "dmesg -c"}
+{"prompt": "Show kernel ring buffer", "completion": "dmesg -w"}
+{"prompt": "Filter kernel messages", "completion": "dmesg | grep -i error"}
+{"prompt": "Show system calls trace", "completion": "strace -e trace=open command"}
+{"prompt": "Show network system calls", "completion": "strace -e trace=network command"}
+{"prompt": "Show file system calls", "completion": "strace -e trace=file command"}
+{"prompt": "Show process system calls", "completion": "strace -e trace=process command"}
+{"prompt": "Show signal system calls", "completion": "strace -e trace=signal command"}
+{"prompt": "Show memory system calls", "completion": "strace -e trace=memory command"}
+{"prompt": "Show descriptor system calls", "completion": "strace -e trace=desc command"}
+{"prompt": "Show IPC system calls", "completion": "strace -e trace=ipc command"}
+{"prompt": "Debug shared libraries", "completion": "ldd /bin/ls"}
+{"prompt": "Show library dependencies", "completion": "objdump -p /bin/ls | grep NEEDED"}
+{"prompt": "Show library search path", "completion": "ldconfig -p"}
+{"prompt": "Update library cache", "completion": "ldconfig"}
+{"prompt": "Show dynamic symbols", "completion": "nm -D /lib/libc.so.6"}
+{"prompt": "Show static symbols", "completion": "nm /usr/lib/libc.a"}
+{"prompt": "Show symbol table", "completion": "objdump -t /bin/ls"}
+{"prompt": "Show disassembly", "completion": "objdump -d /bin/ls"}
+{"prompt": "Show file headers", "completion": "objdump -f /bin/ls"}
+{"prompt": "Show section headers", "completion": "objdump -h /bin/ls"}
+{"prompt": "Show all headers", "completion": "objdump -x /bin/ls"}
+{"prompt": "Show relocation entries", "completion": "objdump -r /bin/ls"}
+{"prompt": "Show dynamic relocations", "completion": "objdump -R /bin/ls"}
+{"prompt": "Show strings in binary", "completion": "strings /bin/ls"}
+{"prompt": "Show ELF header", "completion": "readelf -h /bin/ls"}
+{"prompt": "Show program headers", "completion": "readelf -l /bin/ls"}
+{"prompt": "Show section headers", "completion": "readelf -S /bin/ls"}
+{"prompt": "Show symbol table", "completion": "readelf -s /bin/ls"}
+{"prompt": "Show dynamic section", "completion": "readelf -d /bin/ls"}
+{"prompt": "Show notes section", "completion": "readelf -n /bin/ls"}
+{"prompt": "Show relocations", "completion": "readelf -r /bin/ls"}
+{"prompt": "Show version information", "completion": "readelf -V /bin/ls"}
+{"prompt": "Show debug information", "completion": "readelf -w /bin/ls"}
+{"prompt": "Show all ELF information", "completion": "readelf -a /bin/ls"}
+{"prompt": "Hexdump with ASCII", "completion": "hexdump -C filename"}
+{"prompt": "Octal dump", "completion": "od -c filename"}
+{"prompt": "Binary dump", "completion": "xxd -b filename"}
+{"prompt": "Reverse hexdump", "completion": "xxd -r hexfile binfile"}
+{"prompt": "Show file magic numbers", "completion": "file -b filename"}
+
+
